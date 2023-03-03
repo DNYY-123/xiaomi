@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        #lunbotu1 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #lunbotu2 {
+            width: 500%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+
+        #lunbotu2 li {
+            width: 20%;
+            float: left;
+        }
+
+        #lunbotu2 img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lunbotu1">
+        <ul id="lunbotu2">
+            <li><img src="/xiaomi/images/1.jpeg" alt=""></li>
+            <li><img src="/xiaomi/images/2.jpeg" alt=""></li>
+            <li><img src="/xiaomi/images/13.jpeg" alt=""></li>
+            <li><img src="/xiaomi/images/4.jpeg" alt=""></li>
+            <li><img src="/xiaomi/images/14.jpeg" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        var left = 0;
+        var timer;
+        var imageList = document.getElementById("lunbotu2");
+        var imageWidth = imageList.children[0].clientWidth;
+        var length = imageList.children.length;
+        var step = 0;
+        var oldImageWidth = imageWidth;
+        window.addEventListener("resize", () => {
+            oldImageWidth = imageWidth
+            imageWidth = window.innerWidth
+        })
+        run();
+        function run() {
+            if (left <= -imageWidth * length) {
+                left = 0;
+            }
+            imageList.style.marginLeft = left + 'px';
+            var n;
+            <!-- var n = ((left - step * oldImageWidth) == imageWidth) ? 3000 : (imageWidth / 16); -->
+            if ((left +step * oldImageWidth) == -imageWidth) {
+                n = 3000;
+                step += 1;
+                console.log(left,step, oldImageWidth)
+            } else {
+                n = imageWidth / 16;
+            }
+            <!-- console.log(n) -->
+            left -= imageWidth / 16;
+            timer = setTimeout(run, n)
+        }
+    </script>
+</body>
+
+</html>
