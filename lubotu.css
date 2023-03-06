@@ -46,8 +46,8 @@ li {
 .prev::before,
 .next::before {
     content: '';
-    border-top: 5px solid #000;
-    border-left: 5px solid #000;
+    border-top: 5px solid #ff6900;
+    border-left: 5px solid #ff6900;
     width: 28px;
     height: 28px;
 }
@@ -85,17 +85,11 @@ li {
 .num-ul li {
     height: 3px;
     width: 150px;
-    /* border-radius: 50%; */
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 9px;
     color: #fff;
-    cursor: pointer;
     user-select: none;
-}
-
-.num-ul li:first-child {
-    background-color: #ff6900;
 }
