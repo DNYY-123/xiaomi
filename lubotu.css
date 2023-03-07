@@ -8,6 +8,7 @@ li {
 }
 
 #lunbotu1 {
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -33,8 +34,8 @@ li {
 .prev,
 .next {
     position: absolute;
-    height: 800px;
-    width: 60px;
+    height: 100%;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +72,7 @@ li {
 .num-box {
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 20%;
     transform: translate(-50%, 0);
     z-index: 2;
 }

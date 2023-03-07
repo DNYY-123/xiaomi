@@ -5,6 +5,7 @@
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 li {
@@ -64,7 +65,7 @@ li {
 }
 
 #navbarUl li:first-child>a {
-  color: #ff6900;
+  color: #fe7945;
 }
 
 #login {
@@ -94,38 +95,36 @@ li {
   order: 1;
 }
 
-#tip {
+.tip {
   height: 100%;
   width: 1226px;
   margin: 0 auto;
 }
 
-#tip1 {
+.tip1 {
   overflow: hidden;
   padding: 40px 0;
 }
 
-#tip dl {
+.tip dl {
   margin-right: 100px;
   float: left;
 }
 
-#tip dt {
+.tip dt {
   margin-bottom: 20px;
   font-size: 14px;
 }
 
-#tip a {
-  color: #000;
+.tip a {
   font-size: 12px;
 }
 
-#tip a:hover {
+.tip1>dl>dd a:hover {
   color: #fe7945;
 }
 
 #iphoneNum {
-  /* margin-left: 70%; */
   float: right;
   color: #fe7945;
   width: 20%;
@@ -143,7 +142,7 @@ li {
   color: #000;
 }
 
-#btn {
+.btn {
   width: 50%;
   border: 1px solid #fe7945;
   height: 28px;
@@ -151,15 +150,32 @@ li {
   text-align: center;
   font-size: 12px;
   margin: 2px auto;
+  cursor: pointer;
 }
 
-#btn:hover {
-  background-color: #fe7945;
-  color: #fff;
+.btn a {
+  color: #fe7945;
 }
 
-#btn img {
+.iconfont-message2 {
+  display: none;
+}
+
+.iconfont-message1::before {
+  background: url("/xiaoxi.svg") no-repeat center;
+}
+
+.iconfont-message2::before {
+  background: url("/xiaoxi2.svg") no-repeat center;
+}
+
+.iconfont-message1::before,
+.iconfont-message2::before {
+  content: "";
+  display: inline-block;
+  background-size: 100%;
   width: 12px;
+  height: 12px;
 }
 
 #bottomNavbar {
@@ -172,13 +188,13 @@ li {
 
 #logo2 {
   position: absolute;
+  cursor: pointer;
 }
 
 #contain {
   width: 1226px;
   margin: 0 auto;
   overflow: hidden;
-  /* position: relative; */
 }
 
 #bottomLogo {
@@ -203,9 +219,9 @@ li {
 }
 
 #guanggao {
-  margin: 4px 0 15px;
+  margin: 5px auto;
+  width: 1226px;
   padding-left: 77px;
-  width: 1000px;
 }
 
 #guanggao img {
