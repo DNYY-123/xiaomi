@@ -162,11 +162,11 @@ li {
 }
 
 .iconfont-message1::before {
-  background: url("/xiaoxi.svg") no-repeat center;
+  background: url("/svg/xiaoxi.svg") no-repeat center;
 }
 
 .iconfont-message2::before {
-  background: url("/xiaoxi2.svg") no-repeat center;
+  background: url("/svg/xiaoxi2.svg") no-repeat center;
 }
 
 .iconfont-message1::before,
