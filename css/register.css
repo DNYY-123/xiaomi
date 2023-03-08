@@ -12,6 +12,17 @@ li {
   list-style-type: none;
 }
 
+input,
+select {
+  border: none;
+  outline: none;
+  background-color: rgb(249, 249, 249, 0);
+}
+
+option {
+  height: 100px;
+}
+
 .content {
   display: flex;
 }
@@ -59,10 +70,15 @@ li {
 .contain_nav {
   height: 100%;
   display: flex;
-  float: left;
   column-gap: 20px;
   font-size: 14px;
   font-weight: lighter;
+  align-items: center;
+}
+
+.contain_nav a {
+  height: 40px;
+  line-height: 40px;
 }
 
 .contain_nav a:hover {
@@ -70,6 +86,7 @@ li {
 }
 
 .mi-nav__divider {
+  height: 20px;
   border-left: 1px solid;
   border-color: rgb(1, 1, 1, 0.1);
 }
@@ -77,9 +94,13 @@ li {
 .mi-nav__item {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 40px;
   margin: 0 5px;
   cursor: pointer;
+}
+
+.mi-nav_simple {
+  display: flex;
 }
 
 .mi-nav__item svg:nth-child(2) {
@@ -96,12 +117,12 @@ li {
 .mi-nav_drop {
   display: none;
   position: absolute;
-  top: 80px;
+  top: 60px;
 }
 
 .mi-nav_drop_ul {
   box-shadow: -1px -1px 15px 1px rgb(1, 1, 1, 0.1),
-              1px 1px 15px 1px rgb(1, 1, 1, 0.1);
+    1px 1px 15px 1px rgb(1, 1, 1, 0.1);
 }
 
 .mi-nav_drop_ul_li {
@@ -109,4 +130,187 @@ li {
   height: 40px;
   text-align: center;
   line-height: 40px;
+}
+
+.mi-nav_drop_ul_li:hover {
+  background-color: #eeeeee;
+}
+
+.mi_container {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.mi-register_card {
+  width: 360px;
+  height: 570px;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 80px;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px 0 rgb(1, 1, 1, 0.3);
+}
+
+.ant-tab {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-tab_title {
+  height: 40px;
+  width: 100%;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.ant-tab_title span:nth-child(2) {
+  border-bottom: 4px solid #ff6900;
+}
+
+.ant-tab_input {
+  width: 100%;
+  height: 90%;
+  text-align: left;
+}
+
+.ant-tab_input-bgc {
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 60px;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+#checkBox {
+  width: 360px;
+  height: 40px;
+}
+
+.ant-tab_input-phone,
+.ant-tab_input-code {
+  display: flex;
+  column-gap: 20px;
+  font-weight: lighter;
+  align-items: center;
+}
+
+.ant-tab_input-phone p {
+  line-height: 30px;
+}
+.ant-tab_input-phone,
+.ant-tab_input-code {
+  line-height: 60px;
+}
+
+.ant-tab_input-phone-title {
+  width: 60px;
+  text-align: center;
+}
+
+.ant-tab_input-getcode {
+  width: 80px;
+  text-align: center;
+}
+
+.placeholder {
+  position: absolute;
+}
+
+.ant-tab_input-code-input,
+.ant-tab_input-phone-input {
+  flex: 1;
+  position: relative;
+}
+
+.ant-tab_input-code-input input,
+.ant-tab_input-phone-input input {
+  height: 40px;
+  width: 100%;
+}
+
+.ant-tab_codeTip,
+.ant-tab_checkbox {
+  height: 60px;
+  line-height: 60px;
+}
+
+.ant-tab_codeTip a,
+.ant-tab_input-getcode a {
+  color: #fe7945;
+}
+
+.ant-tab_bnt button {
+  background-color: #ffc8a5;
+  border: none;
+  border-radius: 5px;
+  height: 60px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.ant-tab_checkbox,
+.ant-tab_bnt,
+.ant-tab_codeTip {
+  height: 10%;
+}
+
+
+
+.ant-tab_bnt-btn {
+  height: 40px;
+  width: 100%;
+}
+
+.ant-tab_anotherWay {
+  text-align: center;
+}
+
+.ant-tab_anotherWay-item {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.ant-tab_anotherWay-item-size svg {
+  width: 40px;
+  height: 100px;
+}
+
+.mi-register_code {
+  width: 80px;
+  height: 80px;
+  background-color: #fe7945;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.mi-register_code::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 80px solid #fff;
+  border-top: 80px solid transparent;
+  border-right: 0px solid transparent;
+  position: absolute;
+}
+
+.mi-register_code svg {
+  width: 50px;
+  height: 50px;
+}
+
+.mi-register_code:hover {
+  transition: 0.5s;
+  opacity: 1;
 }
