@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.bom {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.bom-1 {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+/* 垂直居中方法1 这种方法兼容性依赖translate2d的兼容性*/
+.bom1 {
+    position: relative;
+}
+.bom1-1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 垂直居中方法2  需要知道子元素的高度*/
+.bom2 {
+    position: relative;
+}
+.bom2-1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+/* 垂直居中方法3  需要知道子元素的高度?*/
+.bom3 {
+    position: relative;
+}
+.bom3-1 {
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    margin: auto;
+}
+/* 垂直居中方法4  需要知道子元素的高度*/
+.bom4 {
+    position: relative;
+}
+.bom4-1 {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+/* 垂直居中方法5 line-height  这种方法需要在子元素中将文字显示重置为想要的效果*/
+.bom5 {
+    line-height: 400px;
+    text-align: center;
+    font-size: 0px;
+}
+.bom5-1 {
+    vertical-align: middle;
+    font-size: 16px;
+    display: inline-block;
+    text-align: left;
+}
+/* 垂直居中方法6 table-cell  利用表格内容天然居中*/
+.bom6 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.bom6-1 {
+    display: inline-block;
+}
+/* 垂直居中方法7 flex 考虑兼容性*/
+.bom7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 垂直居中方法8 grid 兼容性不太好*/
+.bom8 {
+    display: grid;
+}
+.bom8-1 {
+    align-self: center;
+    justify-self: center;
+}

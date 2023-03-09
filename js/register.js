@@ -1,23 +1,38 @@
 var btn1 = document.getElementsByClassName("mi-nav__item")[0];
 var btn2 = btn1.getElementsByTagName("svg")
-var btn3 = document.getElementsByClassName("mi-nav_drop")[0];
+var btn3 = document.getElementsByClassName("mi-nav_drop")[0];4
 var btn4 = btn1.getElementsByClassName("mi-nav_simple")[0];
-var btn5 = document.getElementsByClassName("ant-tab_input-bgc")[1]
-  .getElementsByClassName("ant-tab_input-phone-input")[0]
-  .getElementsByTagName("input")[0];
-var btn6 = document.getElementsByClassName("ant-tab_input-bgc")[2]
-  .getElementsByClassName("ant-tab_input-code-input")[0]
-  .getElementsByTagName("input")[0];
-var btn7 =document.getElementsByClassName("ant-tab_title_login")[0];
-var btn8 =document.getElementsByClassName("ant-tab_title_register")[0];
+var btn5 = document.getElementsByClassName("ant-tab_input_item");
+// var btn6 = document.getElementsByClassName("ant-tab_input-bgc")[2]
+//   .getElementsByClassName("ant-tab_input-code-input")[0]
+//   .getElementsByTagName("input")[0];
+var btn7 = document.getElementsByClassName("ant-tab_title_login")[0];
+var btn8 = document.getElementsByClassName("ant-tab_title_register")[0];
+var btn9 = document.getElementsByClassName("ant-tab_bar")[0];
+var btn10 = document.getElementsByClassName("mi-register_code")[0];
+var btn11 = document.getElementsByClassName("tankuang")[0];
+var btn12 =document.getElementsByClassName("mi-register_card_item")[0];
 
+btn9.style.borderBottom = "3px solid #fe7945";
+btn9.style.left = "96px";
+btn11.style.display = "none";
+
+btn12.style.left = "-370px";
 
 btn1.addEventListener("mouseenter", changeColor1);
 btn1.addEventListener("mouseleave", changeColor2);
-btn5.addEventListener("focus", changeColor3);
-btn6.addEventListener("focus", changeColor3);
-btn5.addEventListener("blur", changeColor4);
-btn6.addEventListener("blur", changeColor4);
+btn5[0].addEventListener("focus", changeColor3);
+btn5[1].addEventListener("focus", changeColor3);
+btn5[2].addEventListener("focus", changeColor3);
+btn5[3].addEventListener("focus", changeColor3);
+btn5[0].addEventListener("blur", changeColor4);
+btn5[1].addEventListener("blur", changeColor4);
+btn5[2].addEventListener("blur", changeColor4);
+btn5[3].addEventListener("blur", changeColor4);
+btn7.addEventListener("click", changeColor5);
+btn8.addEventListener("click", changeColor5);
+btn10.addEventListener("mouseenter", changeColor6);
+btn10.addEventListener("mouseleave", changeColor7);
 
 function changeColor1() {
   btn4.style.color = "#fe7945";
@@ -35,23 +50,49 @@ function changeColor2() {
 }
 
 function changeColor3(e) {
-  var bom = e.target.parentNode.children[0];
-  var bom1 = e.target.parentNode.parentNode;
+  let bom = e.target.parentNode.children[1];
+  let bom1 = e.target.parentNode.parentNode;
+  bom.style.transition = "top .15s cubic-bezier(.4,0,.2,1),font-size 1s,color .5s";
   bom.style.color = "#fe7945";
   bom.style.fontSize = "12px"
   bom.style.top = "-18px"
-  bom.style.transition = "top .15s cubic-bezier(.4,0,.2,1),font-size 1s,color .5s";
   bom1.style.border = "1px solid #fe7945";
 }
 
 function changeColor4(e) {
-  var bom1 = e.target.parentNode.parentNode;
-  var bom = e.target.parentNode.children[0];
-  if(e.target.value === ""){
+  let bom = e.target.parentNode.children[1];
+  let bom1 = e.target.parentNode.parentNode;
+  if (e.target.value === "") {
+    bom.style.transition = "top .15s cubic-bezier(.4,0,.2,1),font-size 1s,color .5s";
     bom.style.color = "#000";
     bom.style.fontSize = "18px"
-    bom.style.top = "0"
-    bom.style.transition = "top .15s cubic-bezier(.4,0,.2,1),font-size 1s,color .5s";
+    bom.style.top = "0";
   }
   bom1.style.border = "none";
+}
+
+function changeColor5(e) {
+  let index = e.target.dataset.index;
+  btn9.style.transition = "0.5s";
+  btn12.style.transition = "0.5s";
+  if (index === '0') {
+    btn9.style.left = "40px";
+    btn12.style.left = "40px";
+  } else {
+    btn9.style.left = "96px";
+    btn12.style.left = "-370px"
+  }
+}
+
+function changeColor6(){
+  btn11.style.transition = "1s";
+  btn11.style.display = "initial";
+  btn11.style.width = "80px";
+  btn11.style.height = "30px";
+}
+function changeColor7(){
+  btn11.style.transition = "0.5s";
+  btn11.style.display = "none";
+  btn11.style.width = "0px";
+  btn11.style.height = "0px";
 }

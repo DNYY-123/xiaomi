@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>防抖演示1</p>
+    <p>防抖演示16464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示164</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示165556464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示164678</p>
+    <p>防抖演示1321315</p>
+    <p>防抖演示16464</p>
+    <p>防抖演示15226464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示15252</p>
+    <p>防抖演示1</p>
+    <p>防抖演示521</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示12525</p>
+    <p>防抖演示5252521</p>
+    <p>防抖演示1525252</p>
+    <p>防抖演示1525</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1523525</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1646</p>
+    <p>防抖演示1</p>
+    <p>防抖演示17474</p>
+    <p>防抖演示1464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示164</p>
+    <p>防抖演示1</p>
+    <p>防抖演示17474</p>
+    <p>防抖演示1</p>
+    <p>防抖演示16464</p>
+    <p>防抖演示1646</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示164</p>
+    <p>防抖演示1</p>
+    <p>防抖演示641</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示164646</p>
+    <p>防抖演示1</p>
+    <p>防抖演示16464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示16464</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示1</p>
+    <p>防抖演示121</p>
+    <p>防抖演示1</p>
+    <p>防抖演示14214</p>
+    <p>防抖演示164</p>
+    <p>防抖演示16421</p>
+    <p>防抖演示1646</p>
+    <p>防抖演示112</p>
+    <p>防抖演示1121</p>
+    <p>防抖演示13</p>
+    <p>防抖演示12</p>
+    <script>
+        function debounce(fn, wait) {
+            var timeout = null;
+            return function() {
+                if(timeout !== null) 
+                        clearTimeout(timeout);
+                timeout = setTimeout(fn, wait);
+            }
+        }
+        // 处理函数
+        function handle() {
+            console.log(Math.random()); 
+        }
+        // 滚动事件
+        window.addEventListener('scroll', debounce(handle, 1000));
+    </script>
+</body>
+</html>

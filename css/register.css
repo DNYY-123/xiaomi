@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -142,16 +143,19 @@ option {
 }
 
 .mi-register_card {
-  width: 360px;
-  height: 570px;
+  width: 450px;
+  height: 650px;
   display: inline-block;
   position: relative;
   margin: 0 auto 80px;
   padding: 40px;
   border-radius: 4px;
   box-shadow: 0 20px 50px 0 rgb(1, 1, 1, 0.3);
+  overflow: hidden;
 }
-
+.ant-tab_input_item{
+  width: 100%;
+}
 .ant-tab {
   width: 100%;
   height: 100%;
@@ -163,7 +167,33 @@ option {
   font-size: 24px;
   line-height: 40px;
   text-align: left;
-  margin-bottom: 20px;
+}
+
+.mi-register_card_item {
+  display: flex;
+  position: absolute;
+  column-gap: 50px;
+}
+
+.mi-register_card_item0 {
+  width: 450px;
+  flex: 0;
+}
+
+.mi-register_card_item1 {
+  flex: 1;
+}
+.ant-tab-login_Id,
+.ant-tab-login_pwd{
+  width: 100%;
+}
+.ant-tab-login_Id_input {
+  /* font-size: 16px; */
+}
+
+.ant-tab_bar {
+  width: 48px;
+  position: absolute;
 }
 
 .ant-tab_input {
@@ -177,8 +207,10 @@ option {
   border-radius: 5px;
   background-color: #f9f9f9;
   height: 60px;
+  width: 360px;
   font-size: 12px;
   font-weight: lighter;
+  position: relative;
 }
 
 #checkBox {
@@ -187,7 +219,9 @@ option {
 }
 
 .ant-tab_input-phone,
-.ant-tab_input-code {
+.ant-tab_input-code,
+.ant-tab-login_Id,
+.ant-tab-login_pwd {
   display: flex;
   column-gap: 20px;
   font-weight: lighter;
@@ -197,6 +231,7 @@ option {
 .ant-tab_input-phone p {
   line-height: 30px;
 }
+
 .ant-tab_input-phone,
 .ant-tab_input-code {
   line-height: 60px;
@@ -214,15 +249,21 @@ option {
 
 .placeholder {
   position: absolute;
+  left: 0;
   font-size: 16px;
-  z-index: 2;
+  font-weight: lighter;
+  cursor: text;
+  user-select: none;
 }
 
 .ant-tab_input-code-input,
-.ant-tab_input-phone-input {
+.ant-tab_input-phone-input,
+.ant-tab_input-Id-input,
+.shurumima {
   flex: 1;
   position: relative;
 }
+
 
 .ant-tab_input-code-input input,
 .ant-tab_input-phone-input input {
@@ -313,4 +354,28 @@ option {
 .mi-register_code:hover {
   transition: 0.5s;
   opacity: 1;
+}
+
+.tankuang {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  right: 80px;
+  background-color: #fe7945;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.tankuang::after {
+  content: "";
+  position: absolute;
+  background-color: #fe7945;
+  width: 10px;
+  height: 10px;
+  right: -12%;
+  top: 20%;
+  transform: translate(-50%, 50%) rotate(45deg);
 }
